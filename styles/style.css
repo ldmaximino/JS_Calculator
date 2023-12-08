@@ -1,0 +1,115 @@
+@font-face {
+    font-family:"DS-Digital-Bold";
+    src: url("/fonts/DS-DIGIB.TTF");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.author {
+    color:#74debd;
+    font-size:15px;
+    text-align: center;
+    padding:10px;
+}
+
+#calculator {
+    background-color: #575757;
+    max-width: 500px;
+    margin:50px auto;
+    padding: 30px 30px 0 30px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 0px #424242;
+}
+
+#calculator::after { /* une los vértices inferiores izquierdos */
+    content:'';
+    position: absolute;
+    width: 25px;
+    height: 8px;
+    background-color: #424242;
+    transform: rotate(45deg);
+    margin-left:-29px;
+    margin-top:-2px;
+    z-index:-1;
+}
+
+#calculator::before { /* une los vértices superiores derechos */
+    content:'';
+    position: absolute;
+    width: 25px;
+    height: 8px;
+    background-color: #424242;
+    transform: rotate(45deg);
+    margin-left:458px;
+    margin-top:-22px;
+    z-index:-1;
+}
+
+.display {
+    width: 100%;
+    padding: 20px;
+    text-align: right;
+    background-color: #bcd1c0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size:45px;
+    font-family:"DS-Digital-Bold";
+}
+
+.display #view1 {
+    font-size:25px;
+}
+
+.display #view2 {
+    overflow: hidden;
+}
+
+.btn-grid {
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+}
+
+.btn-grid > button {
+    padding:10px;
+    background-color: #ececec;
+    font-weight: bold;
+    border-radius: 10px;
+    border-width:5px;
+    border-color:#c9c9c9;
+    font-size: 25px;
+}
+
+.btn-grid > button.typed {
+    background-color: #423e3e;
+    color:white;
+}
+
+.btn-grid > button:hover {
+    background-color: #423e3e;
+    color:white;
+}
+
+.btn-grid #delete {
+    grid-column:span 2;
+}
+
+.btn-grid #equal {
+    grid-column: span 2;
+    background-color: greenyellow;
+    border-color: green;
+}
+
+.btn-grid #equal.typed {
+    color: greenyellow;
+    background-color: #423e3e;
+}
+ 
